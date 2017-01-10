@@ -1,0 +1,332 @@
+#header{
+	background-color:#24bcba;
+	text-align:center;
+	padding:20px;
+	color:#ffffff;
+	font-family:"Gill Sans",sans-serif;
+	font-size: 24px;
+	font-weight:600;
+}
+
+
+#addTaskButton{
+	float:right;
+	margin:0;
+	cursor:pointer;
+}
+
+#hamburger{
+float: left;
+cursor:pointer;
+}
+
+
+#icon{
+	cursor: pointer;
+}
+
+
+.delete{
+float:right;
+}
+
+.complete{
+float:right;
+padding: 0px 40px;
+}
+
+
+.completed{
+	display:inline;
+}
+
+.taskName{
+	display:inline;
+}
+
+
+
+
+#tabs_container {
+	font-family: "Gill Sans",sans-serif;
+}
+
+
+
+#tabs_container ul.tabs {
+	list-style: none;
+	margin: 0;
+}
+
+
+
+#tabs_container ul.tabs li {
+	float: left;
+	width:50%;
+	font-size: 22px;
+}
+
+
+
+#tabs_container ul.tabs li a {
+	margin: 0 auto;
+	padding: 21px 80px;
+	display: block;
+	text-decoration: none;
+	background-color: #7d7c7c;
+	color: #ffffff;
+	font-weight:600;
+	text-align:center;
+	cursor: pointer;
+}
+
+
+
+#tabs_container ul.tabs li a:hover {
+background-color:#1b8e8c;
+}
+
+
+
+#tabs_container ul.tabs li.active a {
+	background-color: #565656;
+	padding: 18px 80px;
+	border-bottom: solid 6px #ffff00;
+}
+
+
+
+div.tab_contents_container {
+	padding: 10px;
+}
+
+
+
+div.tab_contents {
+	display: none;
+}
+
+
+
+div.tab_contents_active {
+	display: block;
+}
+
+
+
+div.clear {
+	clear: both;
+}
+
+/*----- Accordion -----*/
+
+h4{
+	font-size: 18px;
+	font-weight: 600;
+	display: inline;
+	margin:0 px;
+	padding: 0 px;
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
+}
+ 
+.accordion {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#ffffea;
+}
+
+.accordion-section{
+	padding: 10 px;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #cdcdcd;
+    background:#ffffff;
+    transition:all linear 0.15s;
+    /* Type */
+	font-size: 20px;
+    color:#4d4d4d;
+}
+ 
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#ffffd1;
+    /* Type */
+    text-decoration:none;
+	font-weight:600;
+}
+ 
+.accordion-section:last-child .accordion-section-title {
+    border-bottom:none;
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px;
+    display:none;
+	font-size: 18px;
+	font-weight:300;
+	line-height: 25px;
+	color: #4d4d4d;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*--------Delete Confirmation Popup -------------*/
+
+/* -------------------------------- 
+
+xpopup 
+
+-------------------------------- */
+ul{
+list-style: none;
+padding:0;	
+}
+
+.cd-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(94, 110, 141, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 4em auto;
+  background: #FFF;
+  border-radius: .25em .25em .4em .4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.cd-popup-container p {
+	padding: 65px 5px 50px 5px;
+	font-family: "Gill Sans",sans-serif;
+	font-size: 22px;
+	line-height: 30px;
+	color: #4d4d4d;
+	text-align:center;
+}
+
+.cd-popup-container .cd-buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-popup-container .cd-buttons li {
+  float: left;
+  width: 50%;
+}
+
+.cd-popup-container .cd-buttons a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-family: "Gill Sans",sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.cd-popup-container .cd-buttons li:first-child a {
+  background: #7d7c7c;
+  border-radius: 0 0 0 .25em;
+}
+.no-touch .cd-popup-container .cd-buttons li:first-child a:hover {
+  background-color: #565656;
+}
+.cd-popup-container .cd-buttons li:last-child a {
+  background: #24bcba;
+  border-radius: 0 0 .25em 0;
+}
+.no-touch .cd-popup-container .cd-buttons li:last-child a:hover {
+  background-color: #1b8e8c;
+}
+.cd-popup-container .cd-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+}
+.cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 14px;
+  height: 3px;
+  background-color: #8f9cb5;
+}
+.cd-popup-container .cd-popup-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 8px;
+}
+.cd-popup-container .cd-popup-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 8px;
+}
+.is-visible .cd-popup-container {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+@media only screen and (min-width: 1170px) {
+  .cd-popup-container {
+    margin: 8em auto;
+  }
+}

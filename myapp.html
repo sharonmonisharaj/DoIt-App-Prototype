@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <title>Tabbed Content with CSS and jQuery</title>
+    <link href="myapp.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="myapp.js"></script>
+  </head>
+  
+  <body>
+    
+   <header id="header">
+   <img src="hamburger.png" id="hamburger" onclick="hamburgerMenu()">
+        	<a>Task Board</a>
+            <img src="add.png" id="addTaskButton" onclick="newPersonalTaskCreation()">
+        </header>
+  
+
+
+    
+    <!-- This is the box that all of the tabs and contents of 
+         the tabs will reside -->
+    <div id="tabs_container">
+      
+      <!-- These are the tabs -->
+      <ul class="tabs">
+        <li id="personal_tab" class="active tab_element"><a href="#" rel="#tab_1_contents" class="tab">Personal</a></li>
+        <li id="group_tab" class="tab_element"><a href="#" rel="#tab_2_contents" class="tab">Group</a></li>
+      </ul>
+      
+      <!-- This is used so the contents don't appear to the 
+           right of the tabs -->
+      <div class="clear"></div>
+      
+      
+      
+      <!-- This is a div that hold all the tabbed contents -->
+      <div class="tab_contents_container">
+    
+<!-- Tab 1 Contents -->
+        <div id="tab_1_contents" class="tab_contents tab_contents_active">
+        
+<!-- Accordion starts here -->        
+<div class="accordion" id="personalAccordion">
+
+    <div class="accordion-section" id="personalTask-1">
+    		
+        	<a class="accordion-section-title" href="#accordion-1">Paint Fence
+            <img src="delete.png" class="delete">
+            <img src="complete.png" class="complete"> 
+            </a> 
+            
+        	<div id="accordion-1" class="accordion-section-content">
+            	<div class="task" id="task1">
+                	<p><h4>Due at :</h4>	8:00 pm, 12 Oct 2016<br>
+                	<h4>Assigned to :</h4>	Myself<br>
+                	<h4>Category :</h4>	Home<br>
+                	<h4>Priority :</h4>	High</p>
+                	
+                	</div>
+        		</div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+
+	<div class="accordion-section" id="personalTask-2">
+			<a class="accordion-section-title" href="#accordion-2">Buy Milk
+            <img src="delete.png" class="delete">  
+            <img src="complete.png" class="complete"> 
+            </a>
+            
+			<div id="accordion-2" class="accordion-section-content">
+				<div class="task" id="task1">
+                	<p><h4>Due at :</h4> 7:00 am, 15 Oct 2016<br>
+                	<h4>Assigned to :</h4> Myself<br>
+                	<h4>Category :</h4> Home<br>
+                	<h4>Priority :</h4> Low</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section" id="personalTask-3">
+			<a class="accordion-section-title" href="#accordion-3">Fix Kitchen Cupboard
+            <img src="delete.png" class="delete">
+            <img src="complete.png" class="complete"> 
+            </a>
+            
+			<div id="accordion-3" class="accordion-section-content">
+				<div class="task" id="task1">
+                	<p><h4>Due at :</h4> 5:00 am, 16 Oct 2016<br>
+               		<h4>Assigned to :</h4> Myself<br>
+                	<h4>Category :</h4> Home<br>
+                	<h4>Priority :</h4> Medium</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section" id="personalTask-4">
+			<a class="accordion-section-title" href="#accordion-4">Negotiations Assignment
+            <img src="delete.png" class="delete"> 
+            <img src="complete.png" class="complete"> 
+            </a> 
+            
+			<div id="accordion-4" class="accordion-section-content">
+				<div class="task" id="task1">
+                	<p><h4>Due at :</h4> 11:59 pm, 17 Oct 2016<br>
+                	<h4>Assigned to :</h4> Myself<br>
+                	<h4>Category :</h4> Academics<br>
+                	<h4>Priority :</h4> High</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section" id="personalTask-5">
+			<a class="accordion-section-title" href="#accordion-5">Scan Drawings
+            <img src="delete.png" class="delete"> 
+            <img src="complete.png" class="complete"> 
+            </a>
+            
+			<div id="accordion-5" class="accordion-section-content">
+				<div class="task" id="task1">
+                	<p><h4>Due at :</h4> 4:30 pm, 18 Oct 2016<br>
+                	<h4>Assigned to :</h4> Myself<br>
+                	<h4>Category :</h4> Internship<br>
+                	<h4>Priority :</h4> Medium</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+            
+</div><!--end .accordion-->
+
+        </div>
+    
+    
+    
+        <!-- Tab 2 Contents -->
+        <div id="tab_2_contents" class="tab_contents">
+          
+          <div class="accordion" id="groupAccordion">
+
+    <div class="accordion-section">
+        	<a class="accordion-section-title" href="#accordion-g1">Sequence Flow Diagram
+            <img src="delete.png" class="delete">
+            <img src="complete.png" class="complete">  
+            </a>
+
+        	<div id="accordion-g1" class="accordion-section-content">
+            	<div class="task" id="task1">
+               		
+                	<p><h4>Due at :</h4> 10:00 pm, 12 Oct 2016<br>
+                	<h4>Assigned to :</h4> Sandra Roberts<br>
+                	<h4>Group :</h4> UCRE<br>
+                	<h4>Category :</h4> Academics<br>
+                	<h4>Priority :</h4> High</p>
+                	
+                	
+                	</div>
+        		</div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+
+	<div class="accordion-section">
+			<a class="accordion-section-title" href="#accordion-g2">Mop Living Room
+            <img src="delete.png" class="delete"> 
+            <img src="complete.png" class="complete"> 
+            </a>
+            
+			<div id="accordion-g2" class="accordion-section-content">
+				<div class="task" id="task1">
+                	
+                	<p><h4>Due at :</h4> 7:00 am, 15 Oct 2016<br>
+                	<h4>Assigned to :</h4> Tim Elliot<br>
+                	<h4>Group :</h4> Family<br>
+                	<h4>Category :</h4> Maintenance<br>
+                	<h4>Priority :</h4> Low</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section">
+			<a class="accordion-section-title" href="#accordion-g3">Buy Cocoa Puffs
+            <img src="delete.png" class="delete"> 
+            <img src="complete.png" class="complete"> 
+            </a>
+
+			<div id="accordion-g3" class="accordion-section-content">
+				<div class="task" id="task1">
+                	
+                	<p><h4>Due at :</h4> 8:00 am, 16 Oct 2016<br>
+                	<h4>Assigned to :</h4> Matthew Elliot<br>
+                	<h4>Group :</h4> Family<br>
+                	<h4>Category :</h4> Food<br>
+                	<h4>Priority :</h4> Medium</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section">
+			<a class="accordion-section-title" href="#accordion-g4">Pay Electricity Bill
+            <img src="delete.png" class="delete"> 
+            <img src="complete.png" class="complete"> 
+            </a>
+            
+			<div id="accordion-g4" class="accordion-section-content">
+				<div class="task" id="task1">
+                	
+                	<p><h4>Due at :</h4> 11:59 pm, 17 Oct 2016<br>
+                	<h4>Assigned to :</h4> Bernie Elliot<br>
+                	<h4>Group :</h4> Family<br>
+                	<h4>Category :</h4> Finances<br>
+                	<h4>Priority :</h4> High</p>
+                    
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+    
+    <div class="accordion-section">
+			<a class="accordion-section-title" href="#accordion-g5">Pay Rent
+            <img src="delete.png" class="delete">  
+            <img src="complete.png" class="complete">
+            </a>
+            
+			<div id="accordion-g5" class="accordion-section-content">
+				<div class="task" id="task1">
+                	
+                	<p><h4>Due at :</h4> 4:30 pm, 18 Oct 2016<br>
+                	<h4>Assigned to :</h4> Matthew Elliot<br>
+                	<h4>Group :</h4> Family<br>
+                	<h4>Category :</h4> Finances<br>
+                	<h4>Priority :</h4> High</p>
+                	
+                </div>
+			</div><!--end .accordion-section-content-->
+	</div><!--end .accordion-section-->
+            
+</div><!--end .accordion-->
+          
+        </div>
+   	  </div>
+    </div>
+    
+<div class="cd-popup" role="alert">
+	<div class="cd-popup-container">
+		<p>Are you sure you want to<br> delete this task?</p>
+		<ul class="cd-buttons">
+			<li><a href="#0" id="no">No</a></li>
+            <li><a href="#0" id="yes">Yes</a></li>
+		</ul>
+	</div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->
+
+    
+  </body>
+</html>
